@@ -4,5 +4,4 @@ services:
     image: rosetta-health-check
     build: .
     restart: unless-stopped
-    ports:
-      - "9080:9080"
+    network_mode: "host"
