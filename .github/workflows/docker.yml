@@ -2,7 +2,7 @@ name: Publish Docker image
 on:
   push:
     branches:
-      - master
+      - test-rancher
     paths-ignore:
       - deploy/*
       - README.md
