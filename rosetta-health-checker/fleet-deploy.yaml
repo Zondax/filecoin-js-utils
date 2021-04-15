@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rosetta-health-check
+spec:
+  replicas: 1
+  template:
+    spec:
+      imagePullSecrets:
+        - github
+      containers:
+        - name: rosetta-health-check
+          image: ghcr.io/zondax/rosetta-health-check:latest
