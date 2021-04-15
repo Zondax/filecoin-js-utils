@@ -4,7 +4,13 @@ metadata:
   name: rosetta-health-check
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: rosetta-health-check
   template:
+    metadata:
+      labels:
+        app: rosetta-health-check
     spec:
       imagePullSecrets:
         - github
