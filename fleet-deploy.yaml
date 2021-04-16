@@ -13,7 +13,7 @@ spec:
         app: rosetta-health-check
     spec:
       imagePullSecrets:
-        - github
+        - name: github
       containers:
         - name: rosetta-health-check
           image: ghcr.io/zondax/rosetta-health-check:latest
